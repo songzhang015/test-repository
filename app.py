@@ -1,14 +1,14 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Hello, World!"
+    return jsonify({"message": "Hello, World!"})
 
 @app.route("/health")
 def health():
-    return "Everything looks good!"
+    return jsonify({"message": "Everything looks good!"})
 
 @app.route("/about")
 def about():
