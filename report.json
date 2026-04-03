@@ -1,8 +1,8 @@
 {
   "summary": {
     "total": 3,
-    "passed": 0,
-    "failed": 3
+    "passed": 2,
+    "failed": 1
   },
   "persisted": false,
   "results": [
@@ -10,14 +10,13 @@
       "endpoint": "/",
       "method": "GET",
       "test_id": "success-valid-request",
-      "passed": false,
-      "failure_type": "content_mismatch",
-      "why_failed": "Response content mismatch at $ (expected=\"Hello, World!\" got={\"message\":\"Hello, World!\"}).",
-      "error": "response content mismatch",
+      "passed": true,
       "expected_status": [
         200
       ],
-      "expected_content": "Hello, World!",
+      "expected_content": {
+        "message": "Hello, World!"
+      },
       "status": 200,
       "body": "{\n  \"message\": \"Hello, World!\"\n}\n",
       "latency_ms": 1
@@ -42,14 +41,13 @@
       "endpoint": "/health",
       "method": "GET",
       "test_id": "success-valid-request",
-      "passed": false,
-      "failure_type": "content_mismatch",
-      "why_failed": "Response content mismatch at $ (expected=\"Everything looks good!\" got={\"message\":\"Everything looks good!\"}).",
-      "error": "response content mismatch",
+      "passed": true,
       "expected_status": [
         200
       ],
-      "expected_content": "Everything looks good!",
+      "expected_content": {
+        "message": "Everything looks good!"
+      },
       "status": 200,
       "body": "{\n  \"message\": \"Everything looks good!\"\n}\n",
       "latency_ms": 1

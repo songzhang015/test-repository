@@ -1,21 +1,6 @@
 **Endpoints tested**: 3
-**Endpoints passed**: 0
-**Endpoints failed**: 3## Endpoint: /
-
-### Success: False
-
-**Method:** GET
-**Test ID** `success-valid-request`
-
-**Expected Outputs:** [200]
-**Booted Code:** 200
-
-**Booted Output:**
-```json
-{
-  "message": "Hello, World!"
-}
-```## Endpoint: /about
+**Endpoints passed**: 2
+**Endpoints failed**: 1## Endpoint: /about
 
 ### Success: False
 
@@ -28,19 +13,4 @@
 **Booted Output:**
 ```
 About Page!
-```## Endpoint: /health
-
-### Success: False
-
-**Method:** GET
-**Test ID** `success-valid-request`
-
-**Expected Outputs:** [200]
-**Booted Code:** 200
-
-**Booted Output:**
-```json
-{
-  "message": "Everything looks good!"
-}
 ```
