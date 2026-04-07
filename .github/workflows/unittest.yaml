@@ -28,7 +28,7 @@ jobs:
         shell: bash
 
     env:
-      SYNRAX_API_BASE_URL: "https://persuadedly-unrebuilt-filiberto.ngrok-free.dev"
+      SYNRAX_API_BASE_URL: "http://127.0.0.1:4040"
       DEFAULT_HEALTH_URL: "http://127.0.0.1:5000/health"
       SYNRAX_OIDC_AUDIENCE: "synrax"
 
@@ -36,7 +36,7 @@ jobs:
 
       ROOT_DIR: "."
       SYNRAX_DOCS_PATH: "docs.txt"
-      SYNRAX_REPO_ID: "1198870303"
+      SYNRAX_REPO_ID: "1203316440"
       SYNRAX_PORT: "5000"
       SYNRAX_HEALTH_ENDPOINT_RAW: "health"
       BUILD_LOG_PATH: "./build.log"
@@ -319,7 +319,7 @@ jobs:
           DOCS_ABS_PATH="${GITHUB_WORKSPACE}/./docs.txt"
           echo "Docs absolute path: $DOCS_ABS_PATH"
 
-          go run . read '1198870303' "$DOCS_ABS_PATH" '${{ steps.oidc.outputs.token }}' '${{ inputs.target_branch }}'
+          go run . read '1203316440' "$DOCS_ABS_PATH" '${{ steps.oidc.outputs.token }}' '${{ inputs.target_branch }}'
 
           if [ ! -f synrax/report.json ]; then
             echo "ERROR: report.json was not created."
