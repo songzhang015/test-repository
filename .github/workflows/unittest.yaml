@@ -29,7 +29,7 @@ jobs:
 
     env:
       SYNRAX_API_BASE_URL: "https://persuadedly-unrebuilt-filiberto.ngrok-free.dev"
-      DEFAULT_HEALTH_URL: "http://127.0.0.1:5000/healthy"
+      DEFAULT_HEALTH_URL: "http://127.0.0.1:5000/health"
       SYNRAX_OIDC_AUDIENCE: "synrax"
 
       DEFAULT_LISTENER_CMD: "python app.py"
@@ -38,7 +38,7 @@ jobs:
       SYNRAX_DOCS_PATH: "docs.txt"
       SYNRAX_REPO_ID: "1198870303"
       SYNRAX_PORT: "5000"
-      SYNRAX_HEALTH_ENDPOINT_RAW: "healthy"
+      SYNRAX_HEALTH_ENDPOINT_RAW: "health"
       BUILD_LOG_PATH: "./build.log"
       LISTENER_LOG_PATH: "./listener.log"
 
