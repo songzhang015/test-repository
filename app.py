@@ -14,5 +14,10 @@ def health():
 def about():
     return "About Page!"
 
+@app.route(/double)
+def double():
+    value = request.args.get('n')
+    return jsonify({"result": int(value) * 2}), 200
+
 if __name__ == "__main__":
     app.run(debug=True)
