@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "total": 3,
+    "passed": 2,
+    "failed": 1
+  },
+  "persisted": false,
+  "results": [
+    {
+      "endpoint": "/",
+      "method": "GET",
+      "test_id": "success-valid-request",
+      "passed": true,
+      "expected_status": [
+        200
+      ],
+      "expected_content": {
+        "message": "Hello, World!"
+      },
+      "status": 200,
+      "body": "{\n  \"message\": \"Hello, World!\"\n}\n",
+      "latency_ms": 1
+    },
+    {
+      "endpoint": "/about",
+      "method": "GET",
+      "test_id": "success-valid-request",
+      "passed": false,
+      "failure_type": "response_parse_error",
+      "why_failed": "Expected structured content, but response body is not valid JSON.",
+      "error": "response content is not valid JSON",
+      "expected_status": [
+        200
+      ],
+      "expected_content": "About Page!",
+      "status": 200,
+      "body": "About Page!",
+      "latency_ms": 1
+    },
+    {
+      "endpoint": "/health",
+      "method": "GET",
+      "test_id": "success-valid-request",
+      "passed": true,
+      "expected_status": [
+        200
+      ],
+      "expected_content": {
+        "message": "Everything looks good!"
+      },
+      "status": 200,
+      "body": "{\n  \"message\": \"Everything looks good!\"\n}\n",
+      "latency_ms": 1
+    }
+  ]
+}
