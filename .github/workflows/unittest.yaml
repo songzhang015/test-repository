@@ -28,7 +28,7 @@ jobs:
         shell: bash
 
     env:
-      SYNRAX_API_BASE_URL: "https://persuadedly-unrebuilt-filiberto.ngrok-free.dev"
+      SYNRAX_API_BASE_URL: "https://api.synrax.org"
       DEFAULT_HEALTH_URL: "http://127.0.0.1:5000/health"
       SYNRAX_OIDC_AUDIENCE: "synrax"
 
